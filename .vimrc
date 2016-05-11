@@ -45,7 +45,13 @@ set smartcase		" Do smart case matching
 "set incsearch		" Incremental search
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden		" Hide buffers when they are abandoned
-set mouse=a		" Enable mouse usage (all modes)
+"set mouse=a		" Enable mouse usage (all modes)
 filetype plugin indent on
 set shiftwidth=2
 set expandtab
+map h <nop>
+map j <left>
+map k <down>
+map l <up>
+map m <right>
+
