@@ -7,7 +7,7 @@
     foreground_color = "#f0f0f0"
     icon_bell = False
     show_titlebar = False
-    font = Inconsolata 13
+    font = Inconsolata 12
 [layouts]
   [[default]]
     [[[child1]]]
