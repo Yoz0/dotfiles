@@ -108,6 +108,7 @@ bindsym $mod+egrave workspace 7
 bindsym $mod+underscore workspace $workspace8
 bindsym $mod+ccedilla workspace $workspace9 
 bindsym $mod+agrave workspace 10
+bindsym $mod+twosuperior workspace next
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $workspace1 
@@ -198,6 +199,7 @@ bindsym $mod+Shift+x exec "xscreensaver-command -lock"
 exec "thunderbird"
 exec "vivaldi"
 exec "skype"
+exec "dropbox start"
 exec_always "bash ~/.fehbg"
 exec "xflux -l 48.583148 -g 7.747882 &"
 exec "xscreensaver -no-splash &"
