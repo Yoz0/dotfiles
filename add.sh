@@ -4,5 +4,7 @@ then
   echo "Usage : $0 <nom_du_fichier>";
   exit 1;
 fi
-cp -Lirl $HOME/$1 home/.
+OLD_PWD=`pwd`
+cd $HOME
+cp -rl --parents $1 $OLD_PWD/home/
 exit 0;
