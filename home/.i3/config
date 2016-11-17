@@ -36,7 +36,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec "dmenu_run -nb '$bg-color' -nf '$text-color' -sb '$urgent-bg-color'"
+bindsym $mod+r exec "rofi -show run -bg '$bg-color' -fg '$text-color' -hlbg '$urgent-bg-color' -font 'Inconsolata 12' -lines '5' -location '2'"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
