@@ -122,7 +122,7 @@ bindsym $mod+Shift+ccedilla move container to workspace $workspace9
 bindsym $mod+Shift+agrave move container to workspace number 10
 
 # assign programs to workspace
-assign [class="vivaldi-stable"] $workspace2
+assign [class="Vivaldi-stable"] $workspace2
 assign [class="Thunderbird"] $workspace9
 assign [class="Skype"] $workspace8
 #reload the configuration file
