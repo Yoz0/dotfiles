@@ -157,8 +157,16 @@ mode "resize" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
-
 bindsym $mod+d mode "resize"
+
+#Move workspace to other output
+mode "Move workspace" {
+        #Move current workspace to different output
+        bindsym Left move workspace to output left
+        bindsym Right move workspace to output right
+        bindsym Escape mode "default"
+}
+bindsym $mod+w mode "Move workspace"
 
 # Window Colours
 #                       border             background         text               indicator
