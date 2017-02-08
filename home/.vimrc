@@ -19,6 +19,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'tpope/vim-endwise'
 Plugin 'avakhov/vim-yaml'
+Plugin 'jvoorhis/coq.vim'
+Plugin 'let-def/vimbufsync'
+Plugin 'the-lambda-church/coquille'
 
 call vundle#end()
 
@@ -64,3 +67,5 @@ let mapleader=","
 
 colorscheme jellybeans
 
+au FileType coq call coquille#FNMapping()
+let g:coquille_auto_move = "true"
