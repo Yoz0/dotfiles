@@ -9,12 +9,12 @@
     use_system_font = False
     visible_bell = True
     background_darkness = 0.93
-    background_type = transparent
     background_image = None
     foreground_color = "#f0f0f0"
     icon_bell = False
     show_titlebar = False
     font = Inconsolata Medium 12
+    background_color = "#121212"
 [layouts]
   [[default]]
     [[[child1]]]
