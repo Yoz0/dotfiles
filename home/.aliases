@@ -3,3 +3,4 @@ alias ssibd='scrot -s Images/IDB-TP2/%F_%T'
 alias fluxkill="kill `ps -e | grep xflux | cut -f2 -d' '`"
 alias ocaml="rlwrap ocaml"
 alias coqtop="rlwrap coqtop"
+alias -g G="| grep --color"
