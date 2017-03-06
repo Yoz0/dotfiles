@@ -211,4 +211,4 @@ exec_always "bash ~/.fehbg"
 exec "xflux -l 48.583148 -g 7.747882 &"
 exec "xscreensaver -no-splash &"
 exec "wicd-gtk -t"
-
+exec "/home/stephane/.config/dumpDbusAdress.sh"
