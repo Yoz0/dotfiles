@@ -14,14 +14,16 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-commentary'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'tpope/vim-endwise'
 Plugin 'avakhov/vim-yaml'
 Plugin 'jvoorhis/coq.vim'
 Plugin 'let-def/vimbufsync'
 Plugin 'the-lambda-church/coquille'
+Plugin 'cwoac/nvim'
 
 call vundle#end()
 
