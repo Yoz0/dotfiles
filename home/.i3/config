@@ -212,10 +212,8 @@ for_window [class="Terminator" instance="dropdown"] floating enable
 
 exec "thunderbird"
 exec "vivaldi"
-# exec "skype"
-exec "dropbox start"
 exec_always "bash ~/.fehbg"
 exec "xflux -l 48.583148 -g 7.747882 &"
-exec "wicd-gtk -t"
+exec "nm-applet"
 exec "/home/stephane/.bin/dumpDbusAdress.sh"
 exec compton
