@@ -194,7 +194,7 @@ hide_edge_borders both
 # Sound Control
 bindsym XF86AudioRaiseVolume exec "amixer -c 1 set Master 1%+"
 bindsym XF86AudioLowerVolume exec "amixer -c 1 set Master 1%-"
-bindsym XF86AudioMute exec "bash /home/stephane/.config/toggleSound.sh"
+bindsym XF86AudioMute exec "bash $HOME/.bin/toggleSound.sh"
 
 # Brigthness Control
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
@@ -211,4 +211,4 @@ exec_always "bash ~/.fehbg"
 exec "xflux -l 48.583148 -g 7.747882 &"
 exec "xscreensaver -no-splash &"
 exec "wicd-gtk -t"
-exec "/home/stephane/.config/dumpDbusAdress.sh"
+exec "/home/stephane/.bin/dumpDbusAdress.sh"
