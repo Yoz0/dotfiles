@@ -203,7 +203,8 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
 
 # i3lock
-bindsym $mod+Shift+x exec "xscreensaver-command -lock"
+bindsym $mod+Shift+x exec "$HOME/.bin/screenlock.sh $HOME/Images/lock.png"
+bindsym XF86Sleep exec "$HOME/.bin/screenlock.sh $HOME/Images/lock.png"
 
 # Dropdown Terminator
 exec terminator -c dropdown -p dropdown -T "Le Terminator" -H --geometry=684x384
@@ -215,7 +216,6 @@ exec "vivaldi"
 exec "dropbox start"
 exec_always "bash ~/.fehbg"
 exec "xflux -l 48.583148 -g 7.747882 &"
-exec "xscreensaver -no-splash &"
 exec "wicd-gtk -t"
 exec "/home/stephane/.bin/dumpDbusAdress.sh"
 exec compton
