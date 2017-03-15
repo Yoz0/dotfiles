@@ -203,6 +203,10 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
 # i3lock
 bindsym $mod+Shift+x exec "xscreensaver-command -lock"
 
+# Dropdown Terminator
+exec terminator -c dropdown -p dropdown -T "Le Terminator" -H --geometry=684x384
+for_window [class="Terminator" instance="dropdown"] floating enable
+
 exec "thunderbird"
 exec "vivaldi"
 # exec "skype"
@@ -212,3 +216,4 @@ exec "xflux -l 48.583148 -g 7.747882 &"
 exec "xscreensaver -no-splash &"
 exec "wicd-gtk -t"
 exec "/home/stephane/.bin/dumpDbusAdress.sh"
+exec compton

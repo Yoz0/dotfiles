@@ -1,26 +1,38 @@
 [global_config]
 [keybindings]
-  go_left = KP_Left
   go_down = KP_Down
+  go_left = KP_Left
   go_right = KP_Right
   go_up = KP_Up
-[profiles]
-  [[default]]
-    use_system_font = False
-    visible_bell = True
-    background_darkness = 0.93
-    background_image = None
-    foreground_color = "#f0f0f0"
-    icon_bell = False
-    show_titlebar = False
-    font = Inconsolata Medium 12
-    background_color = "#121212"
+  hide_window = F1
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_color = "#121212"
+    background_darkness = 0.93
+    background_image = None
+    font = Inconsolata Medium 12
+    foreground_color = "#f0f0f0"
+    icon_bell = False
+    show_titlebar = False
+    use_system_font = False
+    visible_bell = True
+  [[dropdown]]
+    background_color = "#121212"
+    background_darkness = 0.88
+    background_image = None
+    background_type = transparent
+    font = Inconsolata Medium 12
+    foreground_color = "#f0f0f0"
+    icon_bell = False
+    show_titlebar = False
+    use_system_font = False
+    visible_bell = True
