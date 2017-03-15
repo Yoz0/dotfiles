@@ -107,7 +107,9 @@ bindsym $mod+egrave workspace 7
 bindsym $mod+underscore workspace $workspace8
 bindsym $mod+ccedilla workspace $workspace9 
 bindsym $mod+agrave workspace 10
+
 bindsym $mod+twosuperior workspace next
+bindsym $mod+Shift+twosuperior workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $workspace1 
