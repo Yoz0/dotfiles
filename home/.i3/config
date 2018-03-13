@@ -161,6 +161,9 @@ mode "resize" {
 }
 bindsym $mod+d mode "resize"
 
+#Setup additional screen
+bindsym XF86Display exec "toggleScreen.sh"
+
 #Move workspace to other output
 mode "Move workspace" {
         #Move current workspace to different output
