@@ -223,3 +223,4 @@ exec "nm-applet"
 exec "/home/stephane/.bin/dumpDbusAdress.sh"
 # Start compton activating dbus and fading, then disable fading
 exec "compton -f --dbus -b && dbus-send --print-reply=literal --dest=com.github.chjj.compton._0 / com.github.chjj.compton.opts_set string:no_fading_openclose boolean:true"
+exec conky
