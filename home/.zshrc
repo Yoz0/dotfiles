@@ -78,9 +78,7 @@ plugins=(git)
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.aliases
-source $HOME/.env
 source $ZSH/oh-my-zsh.sh
 
 # OPAM configuration
 . /home/stephane/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
-. /home/stephane/opam-coq.8.5.2/opam-init/init.zsh > /dev/null 2> /dev/null || true
