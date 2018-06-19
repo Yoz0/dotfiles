@@ -1,6 +1,9 @@
 #!/bin/sh
-touch $HOME/.dbus/Xdbus
-chmod 600 $HOME/.dbus/Xdbus
-env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
-echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
+echo "" > $HOME/.cron_env
+chmod 600 $HOME/.cron_env
+for VARIABLE in DBUS_SESSION_BUS_ADDRESS DISPLAY
+do
+  env | grep "$VARIABLE" >> $HOME/.cron_env
+  echo "export $VARIABLE" >> $HOME/.cron_env
+done
 exit 0

@@ -220,7 +220,7 @@ for_window [class="Terminator" instance="dropdown"] floating enable
 exec "vivaldi"
 exec "redshift-gtk -l 48.5124:2.2107 -t 5700:3500"
 exec "nm-applet"
-exec "$HOME/.bin/dumpDbusAdress.sh"
+exec "$HOME/.bin/initCronEnv.sh"
 exec terminator -c dropdown -p dropdown -T "Le Terminator" -H --geometry=684x384
 exec "thunderbird"
 # Start compton activating dbus and fading, then disable fading

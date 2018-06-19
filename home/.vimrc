@@ -16,14 +16,14 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'avakhov/vim-yaml'
-Plugin 'jvoorhis/coq.vim'
 Plugin 'let-def/vimbufsync'
-Plugin 'the-lambda-church/coquille'
 Plugin 'cwoac/nvim'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -65,9 +65,14 @@ set statusline+=%*
 
 let g:airline_powerline_fonts = 1
 
+let g:airline#extensions#ale#enabled = 1
+
 let mapleader=","
+
+set spell spelllang=fr,en_us
+set spellsuggest=5
 
 colorscheme jellybeans
 
-au FileType coq call coquille#FNMapping()
-let g:coquille_auto_move = "true"
+match Error /\%81v.\+/
+2match Error /\s\+$/
