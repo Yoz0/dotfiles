@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -Lirl home/* $HOME/.
+cp -ial home/. $HOME/
