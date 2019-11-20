@@ -21,9 +21,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'avakhov/vim-yaml'
-Plugin 'let-def/vimbufsync'
-Plugin 'cwoac/nvim'
-Plugin 'w0rp/ale'
+Plugin 'nanotech/jellybeans.vim'
 
 call vundle#end()
 
@@ -50,14 +48,18 @@ set smartcase		" Do smart case matching
 "set autowrite		" Automatically save before commands like :next and :make
 "set hidden		" Hide buffers when they are abandoned
 "set mouse=a		" Enable mouse usage (all modes)
+set nojoinspaces        " Disable double space after . ? and ! when joining lines
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set viewoptions-=options
+set foldmethod=marker
 map h <nop>
 map j <left>
 map k <down>
 map l <up>
 map m <right>
+imap kk <Esc>:up<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -71,6 +73,8 @@ let mapleader=","
 
 set spell spelllang=fr,en_us
 set spellsuggest=5
+
+set textwidth=80
 
 colorscheme jellybeans
 

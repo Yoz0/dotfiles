@@ -17,12 +17,7 @@ set $urgent-bg-color     #d64937
 #
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:System San Francisco Display 10 
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, if you need a lot of unicode glyphs or
-# right-to-left text rendering, you should instead use pango for rendering and
-# chose a FreeType font, such as:
-# font pango:DejaVu Sans Mono 10
+font pango:Ubuntu Medium 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -35,10 +30,6 @@ bindsym $mod+Shift+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+r exec "rofi -show run -bg '$bg-color' -fg '$text-color' -hlbg '$urgent-bg-color' -font 'Inconsolata 12' -lines '5' -location '2'"
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
@@ -137,7 +128,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+q exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
-set $resize_nb 5 
+set $resize_nb 5
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -186,15 +177,14 @@ client.urgent           $urgent-bg-color $urgent-bg-color $text-color           
 #Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
-        colors {
-                background $bg-color
-                separator #757575
-                #             
-                focused_workspace $bg-color $bg-color $text-color
-                inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
-                urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
-        }
+  status_command i3status
+  colors {
+     background $bg-color
+     separator #757575
+     focused_workspace $bg-color $bg-color $text-color
+     inactive_workspace $inactive-bg-color $inactive-bg-color $inactive-text-color
+     urgent_workspace   $urgent-bg-color   $urgent-bg-color   $text-color
+  }
 }
 
 hide_edge_borders both
@@ -214,17 +204,15 @@ bindsym $mod+Shift+p exec "$HOME/.bin/screenlock.sh $HOME/Images/lock.png"
 # Sleep
 bindsym XF86Sleep exec "$HOME/.bin/sleep.sh $HOME/Images/lock.png"
 
-# Dropdown Terminator
-for_window [class="Terminator" instance="dropdown"] floating enable
-
 exec "vivaldi"
-exec "redshift-gtk -l 48.5124:2.2107 -t 5700:3500"
+exec "redshift-gtk -l 48.5124:2.2107 -t 6500:3500"
 exec "nm-applet"
 exec "$HOME/.bin/initCronEnv.sh"
-exec terminator -c dropdown -p dropdown -T "Le Terminator" -H --geometry=684x384
+exec guake
 exec "thunderbird"
 # Start compton activating dbus and fading, then disable fading
 exec "compton -f --dbus -b && dbus-send --print-reply=literal --dest=com.github.chjj.compton._0 / com.github.chjj.compton.opts_set string:no_fading_openclose boolean:true"
 exec conky
+exec xfce4-power-manager
 
-exec_always "bash ~/.fehbg"
+exec_always ~/.bin/fehbg
