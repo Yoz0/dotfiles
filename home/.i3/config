@@ -26,7 +26,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+c kill
+bindsym $mod+c kill
 
 # start dmenu (a program launcher)
 bindsym $mod+r exec "rofi -show run -bg '$bg-color' -fg '$text-color' -hlbg '$urgent-bg-color' -font 'Inconsolata 12' -lines '5' -location '2'"
@@ -158,14 +158,9 @@ bindsym $mod+d mode "resize"
 #Setup additional screen
 bindsym XF86Display exec "toggleScreen.sh"
 
-#Move workspace to other output
-mode "Move workspace" {
-        #Move current workspace to different output
-        bindsym Left move workspace to output left
-        bindsym Right move workspace to output right
-        bindsym Escape mode "default"
-}
-bindsym $mod+w mode "Move workspace"
+#Move current workspace to different output
+bindsym $mod+Control+j move workspace to output left
+bindsym $mod+Control+m move workspace to output right
 
 # Window Colours
 #                       border             background         text               indicator
@@ -199,7 +194,8 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
 bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
 
 # i3lock
-bindsym $mod+Shift+p exec "$HOME/.bin/screenlock.sh $HOME/Images/lock.png"
+bindsym $mod+mod1+l exec "$HOME/.bin/screenlock.sh $HOME/Images/lock.png"
+
 
 # Sleep
 bindsym XF86Sleep exec "$HOME/.bin/sleep.sh $HOME/Images/lock.png"
@@ -214,5 +210,7 @@ exec "thunderbird"
 exec "compton -f --dbus -b && dbus-send --print-reply=literal --dest=com.github.chjj.compton._0 / com.github.chjj.compton.opts_set string:no_fading_openclose boolean:true"
 exec conky
 exec xfce4-power-manager
+exec blueman-applet
+exec megasync
 
 exec_always ~/.bin/fehbg
