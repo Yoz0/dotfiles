@@ -71,7 +71,7 @@ let g:airline#extensions#ale#enabled = 1
 
 let mapleader=","
 
-set spell spelllang=fr,en_us
+set spell spelllang=en_us
 set spellsuggest=5
 
 set textwidth=80
