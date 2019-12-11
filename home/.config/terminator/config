@@ -4,6 +4,7 @@
   go_left = KP_Left
   go_right = KP_Right
   go_up = KP_Up
+  next_profile = <Shift>twosuperior
 [layouts]
   [[default]]
     [[[child1]]]
@@ -20,6 +21,16 @@
     copy_on_selection = True
     cursor_color = "#f0f0f0"
     font = Inconsolata Medium 12
+    foreground_color = "#f0f0f0"
+    icon_bell = False
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
+    visible_bell = True
+  [[Big screen]]
+    copy_on_selection = True
+    cursor_color = "#aaaaaa"
+    font = Inconsolata Medium 17
     foreground_color = "#f0f0f0"
     icon_bell = False
     scrollbar_position = hidden
