@@ -20,11 +20,13 @@
     background_darkness = 0.93
     copy_on_selection = True
     cursor_color = "#f0f0f0"
-    font = Inconsolata Medium 12
+    custom_command = zsh
+    font = Inconsolata 17
     foreground_color = "#f0f0f0"
     icon_bell = False
     scrollbar_position = hidden
     show_titlebar = False
+    use_custom_command = True
     use_system_font = False
     visible_bell = True
   [[Big screen]]

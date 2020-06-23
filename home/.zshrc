@@ -1,11 +1,11 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/stephane/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="smt"
+ZSH_THEME="random"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -49,7 +49,7 @@ HIST_STAMPS="myyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git common-aliases python sudo)
+plugins=(git common-aliases python sudo svn docker)
 
 # User configuration
 
@@ -79,6 +79,11 @@ plugins=(git common-aliases python sudo)
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source $HOME/.aliases
 source $ZSH/oh-my-zsh.sh
+source $HOME/.env
+
+unsetopt correct_all
 
 # OPAM configuration
 . /home/stephane/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+eval $(thefuck --alias)

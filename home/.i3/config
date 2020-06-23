@@ -17,13 +17,13 @@ set $urgent-bg-color     #d64937
 #
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font pango:Ubuntu Medium 10
+font pango:Roboto Medium 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec terminator
 
 # kill focused window
 bindsym $mod+c kill
@@ -98,8 +98,8 @@ bindsym $mod+underscore workspace $workspace8
 bindsym $mod+ccedilla workspace $workspace9 
 bindsym $mod+agrave workspace 10
 
-bindsym $mod+twosuperior workspace next
-bindsym $mod+Shift+twosuperior workspace prev
+bindsym $mod+oe workspace next
+bindsym $mod+Shift+oe workspace prev
 
 # move focused container to workspace
 bindsym $mod+Shift+ampersand move container to workspace $workspace1 
@@ -156,7 +156,8 @@ mode "resize" {
 bindsym $mod+d mode "resize"
 
 #Setup additional screen
-bindsym XF86Display exec "toggleScreen.sh"
+bindsym $mod+mod1+F8 exec "toggleScreen.sh"
+bindsym $mod+mod1+d exec "toggleScreen.sh"
 
 #Move current workspace to different output
 bindsym $mod+Control+j move workspace to output left
@@ -185,32 +186,39 @@ bar {
 hide_edge_borders both
 
 # Sound Control
-bindsym XF86AudioRaiseVolume exec "amixer -c 1 set Master 1%+"
-bindsym XF86AudioLowerVolume exec "amixer -c 1 set Master 1%-"
-bindsym XF86AudioMute exec "bash $HOME/.bin/toggleSound.sh"
+bindsym $mod+mod1+F3 exec "amixer set Master 1%+"
+bindsym XF86AudioRaiseVolume exec "amixer set Master 1%+"
+bindsym $mod+mod1+F2 exec "amixer set Master 1%-"
+bindsym XF86AudioLowerVolume exec "amixer set Master 1%-"
+bindsym $mod+mod1+F1 exec "toggleSound.sh"
+bindsym XF86AudioMute exec "toggleSound.sh"
 
 # Brigthness Control
-bindsym XF86MonBrightnessDown exec "xbacklight -dec 5"
-bindsym XF86MonBrightnessUp exec "xbacklight -inc 5"
+bindsym $mod+mod1+F6 exec "xbacklight -dec 5"
+bindsym XF86MonBrigthnessDown exec "xbacklight -dec 5"
+bindsym $mod+mod1+F7 exec "xbacklight -inc 5"
+bindsym XF86MonBrigthnessUp exec "xbacklight -inc 5"
 
 # i3lock
-bindsym $mod+mod1+l exec "$HOME/.bin/screenlock.sh $HOME/Images/lock.png"
-
+bindsym $mod+mod1+l exec "screenlock.sh $HOME/Pictures/lock.png"
 
 # Sleep
-bindsym XF86Sleep exec "$HOME/.bin/sleep.sh $HOME/Images/lock.png"
+bindsym $mod+mod1+s exec "sleep.sh $HOME/Pictures/lock.png"
+bindsym XF86Sleep exec "sleep.sh $HOME/Pictures/lock.png"
 
 exec "vivaldi"
 exec "redshift-gtk -l 48.5124:2.2107 -t 6500:3500"
-exec "nm-applet"
-exec "$HOME/.bin/initCronEnv.sh"
+exec nm-applet
+exec "initCronEnv.sh"
 exec guake
 exec "thunderbird"
 # Start compton activating dbus and fading, then disable fading
 exec "compton -f --dbus -b && dbus-send --print-reply=literal --dest=com.github.chjj.compton._0 / com.github.chjj.compton.opts_set string:no_fading_openclose boolean:true"
-exec conky
+exec compton
+# exec conky
 exec xfce4-power-manager
 exec blueman-applet
 exec megasync
+exec zotero
 
-exec_always ~/.bin/fehbg
+exec_always "feh --bg-fill $HOME/Pictures/wallpaper.jpg" 

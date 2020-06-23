@@ -22,7 +22,9 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'avakhov/vim-yaml'
 Plugin 'nanotech/jellybeans.vim'
-
+Plugin 'othree/xml.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 call vundle#end()
 
 filetype plugin indent on
@@ -53,7 +55,8 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set viewoptions-=options
-set foldmethod=marker
+set foldmethod=indent
+set foldlevel=20
 map h <nop>
 map j <left>
 map k <down>
@@ -80,3 +83,9 @@ colorscheme jellybeans
 
 match Error /\%81v.\+/
 2match Error /\s\+$/
+
+nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
+let g:UltiSnipsExpandTrigger="<c-k>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
