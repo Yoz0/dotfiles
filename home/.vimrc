@@ -11,20 +11,16 @@ set term=xterm-256color
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'avakhov/vim-yaml'
 Plugin 'nanotech/jellybeans.vim'
-Plugin 'othree/xml.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'lervag/vimtex'
 call vundle#end()
 
 filetype plugin indent on
@@ -38,7 +34,6 @@ endif
 " If using a dark background within the editing area and syntax highlighting
 " turn on this option as well
 " set background=dark
-
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
@@ -57,19 +52,19 @@ set softtabstop=2
 set viewoptions-=options
 set foldmethod=indent
 set foldlevel=20
+set omnifunc=syntaxcomplete#Complete
 map h <nop>
 map j <left>
 map k <down>
 map l <up>
 map m <right>
-imap kk <Esc>:up<CR>
+imap kk <Esc>:w<CR>
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:airline_powerline_fonts = 1
-
 let g:airline#extensions#ale#enabled = 1
 
 let mapleader=","
@@ -77,15 +72,20 @@ let mapleader=","
 set spell spelllang=en_us
 set spellsuggest=5
 
-set textwidth=80
+set textwidth=100
 
 colorscheme jellybeans
 
-match Error /\%81v.\+/
+match Error /\%101v.\+/
 2match Error /\s\+$/
 
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-k>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UtliSnipsEditSplit="vertical"
+
+let g:tex_flavor = 'latex'
+set conceallevel=1
+let g:tex_conceal='abdmg'

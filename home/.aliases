@@ -7,3 +7,5 @@ alias tls="todo-txt -d ~/.todo-txt/todo.cfg ls"
 alias vpninria="sudo openconnect --script ~/.vpn/vpnc-script.txt --cafile \
 ~/.vpn/vpn-inria.pem https://vpn.inria.fr"
 alias fu=fuck
+alias please=sudo
+unalias fd

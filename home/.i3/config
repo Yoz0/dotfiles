@@ -29,7 +29,7 @@ bindsym $mod+Return exec terminator
 bindsym $mod+c kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec "rofi -show run -bg '$bg-color' -fg '$text-color' -hlbg '$urgent-bg-color' -font 'Inconsolata 12' -lines '5' -location '2'"
+bindsym $mod+r exec "rofi -show run -location '2'"
 
 # change focus
 bindsym $mod+j focus left
@@ -209,15 +209,15 @@ bindsym XF86Sleep exec "sleep.sh $HOME/Pictures/lock.png"
 exec "vivaldi"
 exec "redshift-gtk -l 48.5124:2.2107 -t 6500:3500"
 exec nm-applet
-exec "initCronEnv.sh"
+# exec "initCronEnv.sh"
 exec guake
 exec "thunderbird"
 # Start compton activating dbus and fading, then disable fading
-exec "compton -f --dbus -b && dbus-send --print-reply=literal --dest=com.github.chjj.compton._0 / com.github.chjj.compton.opts_set string:no_fading_openclose boolean:true"
-exec compton
+# exec "compton -f --dbus -b && dbus-send --print-reply=literal --dest=com.github.chjj.compton._0 / com.github.chjj.compton.opts_set string:no_fading_openclose boolean:true"
+# exec compton
 # exec conky
 exec xfce4-power-manager
-exec blueman-applet
+# exec blueman-applet
 exec megasync
 exec zotero
 
