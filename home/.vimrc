@@ -21,6 +21,8 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'lervag/vimtex'
+Plugin 'rust-lang/rust.vim'
+Plugin 'vim-syntastic/syntastic'
 call vundle#end()
 
 filetype plugin indent on
@@ -58,11 +60,7 @@ map j <left>
 map k <down>
 map l <up>
 map m <right>
-imap kk <Esc>:w<CR>
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+imap kk <Esc>:up<CR>
 
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#ale#enabled = 1
@@ -85,6 +83,12 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UtliSnipsEditSplit="vertical"
+nnoremap <esc>^[ <esc>^[
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 let g:tex_flavor = 'latex'
 set conceallevel=1
