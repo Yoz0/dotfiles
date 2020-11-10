@@ -7,7 +7,8 @@
 set nocompatible
 filetype off
 
-set term=xterm-256color
+set term=screen-256color
+set encoding=utf-8
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -23,6 +24,9 @@ Plugin 'honza/vim-snippets'
 Plugin 'lervag/vimtex'
 Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
+Plugin 'ervandew/supertab'
+Plugin 'KeitaNakamura/tex-conceal.vim'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -67,8 +71,10 @@ let g:airline#extensions#ale#enabled = 1
 
 let mapleader=","
 
-set spell spelllang=en_us
+set spelllang=en_us
 set spellsuggest=5
+autocmd FileType tex set spell
+
 
 set textwidth=100
 
@@ -87,9 +93,13 @@ nnoremap <esc>^[ <esc>^[
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": [] }
 
 let g:tex_flavor = 'latex'
 set conceallevel=1
-let g:tex_conceal='abdmg'
+let g:tex_conceal='abdmgs'
