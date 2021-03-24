@@ -80,9 +80,11 @@ plugins=(git common-aliases python sudo svn docker)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.env
 source $HOME/.aliases
-source $HOME/.lscolors/lscolors.sh
 
 unsetopt correct_all
 
 
 if [ -e /home/stephane/.nix-profile/etc/profile.d/nix.sh ]; then . /home/stephane/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# opam configuration
+test -r /home/stephane/.opam/opam-init/init.zsh && . /home/stephane/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
