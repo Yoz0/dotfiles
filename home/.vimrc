@@ -26,7 +26,8 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'KeitaNakamura/tex-conceal.vim'
-
+Plugin 'whonore/Coqtail'
+Plugin 'joom/latex-unicoder.vim'
 call vundle#end()
 
 filetype plugin indent on
@@ -103,3 +104,5 @@ let g:syntastic_mode_map = {
 let g:tex_flavor = 'latex'
 set conceallevel=1
 let g:tex_conceal='abdmgs'
+
+imap <C-l> <Esc>:call unicoder#start(1)<CR>
