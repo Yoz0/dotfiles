@@ -28,6 +28,7 @@ Plugin 'ervandew/supertab'
 Plugin 'KeitaNakamura/tex-conceal.vim'
 Plugin 'whonore/Coqtail'
 Plugin 'joom/latex-unicoder.vim'
+Plugin 'LnL7/vim-nix'
 call vundle#end()
 
 filetype plugin indent on
