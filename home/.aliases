@@ -9,4 +9,5 @@ alias vpninria="sudo openconnect --script ~/.vpn/vpnc-script.txt --cafile \
 alias fu=fuck
 alias please=sudo
 unalias rm
+alias nxs=nix-shell
 
